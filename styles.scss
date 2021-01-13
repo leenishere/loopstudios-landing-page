@@ -1,0 +1,97 @@
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$gray: hsl(0, 0%, 55%);
+$dark-gray: hsl(0, 0%, 41%);
+
+body{
+    font-family: "Alata", "sans-serif";
+    font-weight: 400;
+    font-size: 15px;
+    color: $gray;
+    overflow-x: hidden;   
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    color:$dark-gray;
+}
+
+#landing-top{
+    width: 100%;
+
+    img{
+        /* background img */
+        margin: -8px
+    }
+
+    #header{
+        display: flex;
+        position: absolute;
+        top: 5%;
+        left: 10%;
+        align-items: center;
+        width: 90vw;
+    }
+
+    .header-left{
+        width: 30%;
+        img{
+            margin-left: 2px;
+        }
+    }
+
+    .header-right{
+        width: 70%;
+        
+        ul{ 
+            display: flex !important;
+            flex-direction: row;
+            justify-content: flex-end;
+            margin-right: 10%;
+
+
+
+            color: $white;
+            list-style-type: none;
+            display: inline-flex;
+
+            li{
+                margin-right: 2.5rem;
+            }
+        }
+    }
+
+
+    .main-msg{
+        border: 2px solid $white;
+        position: absolute;
+        top: 40%;
+        left: 10%;
+        padding: 40px;
+        max-width: 40%;
+        
+        font-size: 2rem;
+        padding-left: 54px;
+        padding-right: 54px;
+        
+        h1{
+            color: $white;
+        }
+        
+    }
+
+
+}
+
+
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}

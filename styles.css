@@ -1,0 +1,95 @@
+body {
+  font-family: "Alata", "sans-serif";
+  font-weight: 400;
+  color: #8c8c8c;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  color: dimgray;
+}
+
+#landing-top {
+  width: 100%;
+}
+
+#landing-top img {
+  /* background img */
+  margin: -8px;
+}
+
+#landing-top #header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90vw;
+}
+
+#landing-top .header-left {
+  width: 30%;
+}
+
+#landing-top .header-left img {
+  margin-left: 2px;
+}
+
+#landing-top .header-right {
+  width: 70%;
+}
+
+#landing-top .header-right ul {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 10%;
+  color: white;
+  list-style-type: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+#landing-top .header-right ul li {
+  margin-right: 2.5rem;
+}
+
+#landing-top .main-msg {
+  border: 2px solid white;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  padding: 40px;
+  max-width: 40%;
+  font-size: 2rem;
+  padding-left: 54px;
+  padding-right: 54px;
+}
+
+#landing-top .main-msg h1 {
+  color: white;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=styles.css.map */
