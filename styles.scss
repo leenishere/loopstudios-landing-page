@@ -14,17 +14,20 @@ body{
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
-    color:$dark-gray;
+    color:$black;
 }
 
-#landing-top{
-    width: 100%;
-
-    img{
-        /* background img */
-        margin: -8px
-    }
-
+header::before{
+    background-color: $black;
+    opacity: 0.5;
+}
+header{
+    margin: -8px;
+    background-image: url(/images/desktop/image-hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    
     #header{
         display: flex;
         position: absolute;
@@ -36,9 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 
     .header-left{
         width: 30%;
-        img{
-            margin-left: 2px;
-        }
+      
     }
 
     .header-right{
@@ -50,14 +51,23 @@ h1, h2, h3, h4, h5, h6 {
             justify-content: flex-end;
             margin-right: 10%;
 
-
-
-            color: $white;
+            
+            font-size: 14px;
             list-style-type: none;
             display: inline-flex;
 
             li{
                 margin-right: 2.5rem;
+                a{
+                    color: $white;
+                    text-decoration: none;
+
+                    &:hover{
+                        border-bottom: 2px solid $white;
+                        padding-bottom: 8px;
+                    
+                    }
+                }
             }
         }
     }
@@ -66,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
     .main-msg{
         border: 2px solid $white;
         position: absolute;
-        top: 40%;
+        top: 25%;
         left: 10%;
         padding: 40px;
         max-width: 40%;
@@ -83,11 +93,213 @@ h1, h2, h3, h4, h5, h6 {
 
 
 }
+#content{
+    margin: 7.5rem;
+}
+
+#intro-section{
+    margin-bottom: 120px;
+    #intro-img{
+        position: absolute;
+        z-index: -1;
+        
+        width:60%;
+    }
+
+    #about{
+        z-index: 1;
+        width: 50%;
+        margin-left: 50%;
+        padding-top: 16%;
+    }
+ 
+}
+
+#creations{
+    .header{
+        display:inline-flex;
+        width: 100%;
+    }
+
+    .header-left{
+        width: 50%;
+        .title{
+            font-size: 2.5rem;
+            //width: 50%;
+        }
+    }
+   
+
+    .header-right{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        align-items: center;
+
+
+    }
+
+
+    .creation-items{
+        .item{
+            background-repeat: no-repeat;
+            width: 20%;
+            margin: 8px;
+            height: 450px;
+            display: inline-flex;
+            .desc{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+
+            }
+
+            &.deepearth{
+                background-image: url(/images/desktop/image-deep-earth.jpg);
+               
+            }
+
+            &.nightarcade{
+                background-image: url(/images/desktop/image-night-arcade.jpg);
+            }
+            &.soccerteam{
+                background-image: url(/images/desktop/image-soccer-team.jpg);
+            }
+            &.thegrid{
+                background-image: url(/images/desktop/image-grid.jpg);
+            }
+            &.abovevr{
+                background-image: url(/images/desktop/image-from-above.jpg);
+            }
+            &.pocket{
+                background-image: url(/images/desktop/image-pocket-borealis.jpg);
+            }
+            &.curious{
+                background-image: url(/images/desktop/image-curiosity.jpg);
+            }
+            &.fisheye{
+                background-image: url(/images/desktop/image-fisheye.jpg);
+            }
+            
+        }
+    }
+
+}
 
 
 
+#footer{
+    background-color: $black;
+    display: inline-flex;
+    margin-left: -8px;
+    width: 100vw;
+
+
+    padding-left: 7.5rem;
+    padding-right: 7.5rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+
+    .footer-left{
+        width: 50%;
+    }
+
+    .footer-right{
+        width: 30%;
+        p{
+            justify-content: flex-end;
+            display: flex;
+        }
+    }
+
+
+    ul{ 
+        display: flex !important;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        font-size: 14px;
+        list-style-type: none;
+        display: inline-flex;
+        padding-left: 0px;
+        li{
+            margin-right: 2.5rem;
+            a{
+                color: $white;
+                text-decoration: none;
+
+                &:hover{
+                    border-bottom: 2px solid $white;
+                    padding-bottom: 8px;
+                
+                }
+            }
+        }
+    }
+
+    #icon-btn{
+        justify-content: flex-end;
+        li{
+            margin-right:1.2rem;
+        }
+    }
+}
+
+.btn{
+    border: 2px solid $dark-gray;
+    width: 128px;
+    padding: 12px;
+    text-align: center;
+    color: $black;
+
+    letter-spacing: 4px;
+    cursor: pointer;
+    a{
+        text-decoration-line: none;
+        color: $black;
+    }
+
+    &:hover{
+        background-color: $black;
+        a{
+            color: $white;
+        } 
+    }
+
+    &:focus{
+        background-color: $dark-gray;
+        a{
+            color: $white;
+        } 
+    }
+
+    &:active{
+        background-color: $dark-gray;
+        a{
+            color: $white;
+        } 
+    }
+}
+
+.card{
+    background-color: $white;
+    padding: 60px;
+
+    .card-title{
+        color: $black;
+        font-size: 2.5rem;
+        font-weight: 300;
+        margin-block-start: 0;
+    }
+}
 
 .attribution { 
+    background-color: $black;
+    margin: -8px;
+    margin-bottom: 8px;
+    color: $white;
     font-size: 11px; 
     text-align: center; 
 }

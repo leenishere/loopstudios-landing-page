@@ -1,6 +1,7 @@
 body {
   font-family: "Alata", "sans-serif";
   font-weight: 400;
+  font-size: 15px;
   color: #8c8c8c;
   overflow-x: hidden;
 }
@@ -8,19 +9,23 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
-  color: dimgray;
+  color: black;
 }
 
-#landing-top {
-  width: 100%;
+header::before {
+  background-color: black;
+  opacity: 0.5;
 }
 
-#landing-top img {
-  /* background img */
+header {
   margin: -8px;
+  background-image: url(/images/desktop/image-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 600px;
 }
 
-#landing-top #header {
+header #header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,19 +38,15 @@ h1, h2, h3, h4, h5, h6 {
   width: 90vw;
 }
 
-#landing-top .header-left {
+header .header-left {
   width: 30%;
 }
 
-#landing-top .header-left img {
-  margin-left: 2px;
-}
-
-#landing-top .header-right {
+header .header-right {
   width: 70%;
 }
 
-#landing-top .header-right ul {
+header .header-right ul {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -57,21 +58,31 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin-right: 10%;
-  color: white;
+  font-size: 14px;
   list-style-type: none;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
-#landing-top .header-right ul li {
+header .header-right ul li {
   margin-right: 2.5rem;
 }
 
-#landing-top .main-msg {
+header .header-right ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+header .header-right ul li a:hover {
+  border-bottom: 2px solid white;
+  padding-bottom: 8px;
+}
+
+header .main-msg {
   border: 2px solid white;
   position: absolute;
-  top: 40%;
+  top: 25%;
   left: 10%;
   padding: 40px;
   max-width: 40%;
@@ -80,11 +91,249 @@ h1, h2, h3, h4, h5, h6 {
   padding-right: 54px;
 }
 
-#landing-top .main-msg h1 {
+header .main-msg h1 {
   color: white;
 }
 
+#content {
+  margin: 7.5rem;
+}
+
+#intro-section {
+  margin-bottom: 120px;
+}
+
+#intro-section #intro-img {
+  position: absolute;
+  z-index: -1;
+  width: 60%;
+}
+
+#intro-section #about {
+  z-index: 1;
+  width: 50%;
+  margin-left: 50%;
+  padding-top: 16%;
+}
+
+#creations .header {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+}
+
+#creations .header-left {
+  width: 50%;
+}
+
+#creations .header-left .title {
+  font-size: 2.5rem;
+}
+
+#creations .header-right {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#creations .creation-items .item {
+  background-repeat: no-repeat;
+  width: 20%;
+  margin: 8px;
+  height: 450px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+#creations .creation-items .item .desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#creations .creation-items .item.deepearth {
+  background-image: url(/images/desktop/image-deep-earth.jpg);
+}
+
+#creations .creation-items .item.nightarcade {
+  background-image: url(/images/desktop/image-night-arcade.jpg);
+}
+
+#creations .creation-items .item.soccerteam {
+  background-image: url(/images/desktop/image-soccer-team.jpg);
+}
+
+#creations .creation-items .item.thegrid {
+  background-image: url(/images/desktop/image-grid.jpg);
+}
+
+#creations .creation-items .item.abovevr {
+  background-image: url(/images/desktop/image-from-above.jpg);
+}
+
+#creations .creation-items .item.pocket {
+  background-image: url(/images/desktop/image-pocket-borealis.jpg);
+}
+
+#creations .creation-items .item.curious {
+  background-image: url(/images/desktop/image-curiosity.jpg);
+}
+
+#creations .creation-items .item.fisheye {
+  background-image: url(/images/desktop/image-fisheye.jpg);
+}
+
+#footer {
+  background-color: black;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-left: -8px;
+  width: 100vw;
+  padding-left: 7.5rem;
+  padding-right: 7.5rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+#footer .footer-left {
+  width: 50%;
+}
+
+#footer .footer-right {
+  width: 30%;
+}
+
+#footer .footer-right p {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#footer ul {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: 14px;
+  list-style-type: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding-left: 0px;
+}
+
+#footer ul li {
+  margin-right: 2.5rem;
+}
+
+#footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+#footer ul li a:hover {
+  border-bottom: 2px solid white;
+  padding-bottom: 8px;
+}
+
+#footer #icon-btn {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#footer #icon-btn li {
+  margin-right: 1.2rem;
+}
+
+.btn {
+  border: 2px solid dimgray;
+  width: 128px;
+  padding: 12px;
+  text-align: center;
+  color: black;
+  letter-spacing: 4px;
+  cursor: pointer;
+}
+
+.btn a {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  color: black;
+}
+
+.btn:hover {
+  background-color: black;
+}
+
+.btn:hover a {
+  color: white;
+}
+
+.btn:focus {
+  background-color: dimgray;
+}
+
+.btn:focus a {
+  color: white;
+}
+
+.btn:active {
+  background-color: dimgray;
+}
+
+.btn:active a {
+  color: white;
+}
+
+.card {
+  background-color: white;
+  padding: 60px;
+}
+
+.card .card-title {
+  color: black;
+  font-size: 2.5rem;
+  font-weight: 300;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
+
 .attribution {
+  background-color: black;
+  margin: -8px;
+  margin-bottom: 8px;
+  color: white;
   font-size: 11px;
   text-align: center;
 }
