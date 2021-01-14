@@ -9,8 +9,10 @@ body{
     font-size: 15px;
     color: $gray;
     overflow-x: hidden;   
-}
 
+    margin: 0px;
+  
+}   
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
@@ -22,12 +24,13 @@ header::before{
     opacity: 0.5;
 }
 header{
-    margin: -8px;
+   
     background-image: url(/images/desktop/image-hero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 600px;
-    
+    box-shadow:inset 0 0 0 100vw rgba(0, 0, 0, 0.5);
+
     #header{
         display: flex;
         position: absolute;
@@ -70,6 +73,12 @@ header{
                 }
             }
         }
+
+
+        #hamburger-nav{
+            border:none;
+            background:none;
+        }
     }
 
 
@@ -98,19 +107,27 @@ header{
 }
 
 #intro-section{
-    margin-bottom: 120px;
-    #intro-img{
-        position: absolute;
-        z-index: -1;
+    background-image: url(/images/desktop/image-interactive.jpg);
+    background-repeat: no-repeat;
+    background-size: 70%;
+
+
+    padding: 120px;
+
+    // background-position:
+    // margin-bottom: 120px;
+    // #intro-img{
+    //     position: absolute;
+    //     z-index: -1;
         
-        width:60%;
-    }
+    //     width:60%;
+    // }
 
     #about{
-        z-index: 1;
-        width: 50%;
-        margin-left: 50%;
-        padding-top: 16%;
+        width: 60%;
+        position: relative;
+        right: -50%;
+        margin-top: 13%;
     }
  
 }
@@ -143,22 +160,32 @@ header{
 
 
     .creation-items{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 28px;
+        padding-top: 48px;
         .item{
-            background-repeat: no-repeat;
-            width: 20%;
-            margin: 8px;
             height: 450px;
-            display: inline-flex;
-            .desc{
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-end;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            box-shadow:inset 0 0 0 450px rgba(0, 0, 0, 0.5);
 
+            width: auto;
+            .desc{
+                color: $white;
+                font-family:'Josefin Sans', sans-serif;
+                font-weight: 300;
+
+                font-size: 28px;
+                position: relative;
+                left: 10%;
+                bottom: 10%;
+                width: 160px;
             }
 
             &.deepearth{
-                background-image: url(/images/desktop/image-deep-earth.jpg);
-               
+                background-image: url(/images/desktop/image-deep-earth.jpg);  
             }
 
             &.nightarcade{
@@ -192,25 +219,47 @@ header{
 
 #footer{
     background-color: $black;
-    display: inline-flex;
-    margin-left: -8px;
-    width: 100vw;
+    display: grid;
+    grid-template-rows: 40% 40% 20%;
+    
+    //grid-gap: 12px;
+    //grid-template-columns: 50% 50%;
 
-
-    padding-left: 7.5rem;
-    padding-right: 7.5rem;
-    padding-top: 3rem;
-    padding-bottom: 2rem;
-
-    .footer-left{
-        width: 50%;
+    .footer-top{
+        display:grid;
+        grid-template-columns: 50% 50%;
+        #footer-icon{
+            margin-top: 3rem;
+            margin-left: 7.75rem;
+        }
+        #icon-btn{
+            flex-direction: row;
+            justify-content: flex-end;
+            margin-top: 3rem;
+            margin-right: 7.75rem;
+        
+            li{
+                margin-right:1.2rem;
+                &:last-child{
+                    margin-right: 0rem;
+                }
+            }
+        
+        }
     }
 
-    .footer-right{
-        width: 30%;
-        p{
-            justify-content: flex-end;
+    .footer-btm{
+        display:grid;
+        grid-template-columns: 50% 50%;
+        margin-top: 16px;
+        #footer-btns{
+            margin-left: 7.75rem;
+        }
+
+        #copyright{
             display: flex;
+            flex-direction: row-reverse;
+            margin-right: 7.75rem;
         }
     }
 
@@ -239,14 +288,12 @@ header{
         }
     }
 
-    #icon-btn{
-        justify-content: flex-end;
-        li{
-            margin-right:1.2rem;
-        }
-    }
+   
 }
 
+
+
+// Modular parts
 .btn{
     border: 2px solid $dark-gray;
     width: 128px;
@@ -296,9 +343,6 @@ header{
 }
 
 .attribution { 
-    background-color: $black;
-    margin: -8px;
-    margin-bottom: 8px;
     color: $white;
     font-size: 11px; 
     text-align: center; 
@@ -306,4 +350,28 @@ header{
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+//MOBILE
+
+
+@media screen and (max-width: 767px) {
+    
+
+}    
+
+
+//TABLET
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    #nav-btns{
+        display:none;
+    }
+
+}
+
+//LAPTOP/PC
+@media screen and (min-width: 1024px) {
+    #hamburger-nav{
+        display: none;
+    }
 }

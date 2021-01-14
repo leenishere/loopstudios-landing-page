@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Loopstudios landing page</title>
@@ -24,16 +24,18 @@
       <div class="header-left">
         <img src="images/logo.svg">
       </div>
-      <div class="header-right">
-        <ul>
-          <li>
-            <a href="">About</a>
-          </li>
+      <div class="header-right" >
+        <ul id="nav-btns">
+          <li><a href="">About</a></li>
           <li><a href="">Careers</a></li>
           <li><a href="">Events</a></li>
           <li><a href="">Products</a></li>
           <li><a href="">Support</a></li>
         </ul>
+
+        <button id="hamburger-nav">
+          <img src="images/icon-hamburger.svg">
+        </button>
         
       </div>
     </div>
@@ -47,9 +49,10 @@
 
   <div id="content">
     <div id="intro-section">
-      <div id="intro-img">
+
+      <!-- <div id="intro-img">
         <img src="images/desktop/image-interactive.jpg" >
-      </div>
+      </div> -->
       <div id="about">
         <div class="card">
           <h2 class="card-title">THE LEADER IN INTERACTIVE VR</h2>
@@ -86,89 +89,85 @@
         </div>
 
         <div class="item nightarcade">
-          <span>
+          <span class="desc">
             NIGHT ARCADE
           </span>  
         </div>
         
         <div class="item soccerteam">
-          <span>
+          <span class="desc">
             SOCCER TEAM VR
           </span>
         </div>
         
         <div class="item thegrid">
-          <span>
+          <span class="desc">
             THE GRID
           </span>  
         </div>
 
         <div class="item abovevr">
-          <span>
+          <span class="desc">
             FROM UP ABOVE VR
           </span>
         </div>
       
         <div class="item pocket">
-          <span>
+          <span class="desc">
             POCKET BOREALIS
           </span>
         </div>
       
         <div class="item curious">
-          <span>
+          <span class="desc">
             THE CURIOSITY
           </span>
         </div>
 
         <div class="item fisheye">
-          <span>
+          <span class="desc">
             MAKE IT FISHEYE
           </span>
         </div>
       
       </div>
-      
-    
-      
-  
+          
     </div>
     
   </div>
   
-  
   <div id="footer">
     
-      <div class="footer-left">
-        <img src="images/logo.svg">
-        <ul>
-          <li>
-            <a href="">About</a>
-          </li>
-          <li><a href="">Careers</a></li>
-          <li><a href="">Events</a></li>
-          <li><a href="">Products</a></li>
-          <li><a href="">Support</a></li>
-        </ul>
-      </div>
+    <div class="footer-top">
+      <img id="footer-icon" src="images/logo.svg">
+      <ul id="icon-btn">
+        <li><a href="#"><img src="images/icon-facebook.svg"></a></li>
+        <li><a href="#"><img src="images/icon-twitter.svg"></a></li>
+        <li><a href="#"><img src="images/icon-pinterest.svg"></a></li>
+        <li><a href="#"><img src="images/icon-instagram.svg"></a></li>
+      </ul>
+     
+    </div>
 
-      <div class="footer-right">
-        <ul id="icon-btn">
-          <li><a href="#"><img src="images/icon-facebook.svg"></a></li>
-          <li><a href="#"><img src="images/icon-twitter.svg"></a></li>
-          <li><a href="#"><img src="images/icon-pinterest.svg"></a></li>
-          <li><a href="#"><img src="images/icon-instagram.svg"></a></li>
-        </ul>
-        <p>© 2021 Loopstudios. All rights reserved.</p>
-      </div>
-   
-    
+    <div class="footer-btm">
+      <ul id="footer-btns">
+        <li><a href="">About</a></li>
+        <li><a href="">Careers</a></li>
+        <li><a href="">Events</a></li>
+        <li><a href="">Products</a></li>
+        <li><a href="">Support</a></li>
+      </ul>
+      <p id="copyright">© 2021 Loopstudios. All rights reserved.</p>
+    </div>
   
+    <div class="attribution">
+      <p>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Eileen To</a>.
+      </p>
+    </div>
   </div>
  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Eileen To</a>.
-  </div>
+ 
 </body>
 </html>
